@@ -40,6 +40,7 @@ public class Restful implements Inable, Outable {
      */
     @Override
     public void addInQueue(GandalfInMessage gandalfInMessage) {
+        //这里做动态路由绑定 、具体按照业务定 。暂时固定
         //        rabbitAdmin.declareBinding(BindingBuilder.bind(RabbitMQConfigure.queueMap.get(RabbitMQConsts
         // .IN_QUEUE)).to((DirectExchange) RabbitMQConfigure.exchangeMap.get(RabbitMQConsts.IN_EXCHANGE)).with
         // (gandalfInMessage.getFrom()));
