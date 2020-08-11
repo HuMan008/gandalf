@@ -1,0 +1,30 @@
+server:
+  port: 80
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  rabbitmq:
+    #    host: 10.0.250.1
+    host: 106.54.71.192
+    port: 5672
+    username: test
+    password: test
+    virtual-host: myhost
+    publisher-confirms: true
+    publisher-returns: true
+    listener:
+      simple:
+        acknowledge-mode: MANUAL
+      direct:
+        acknowledge-mode: MANUAL
+  thymeleaf:
+    cache: false
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    com.soa: DEBUG
+  path: logs
+
+
+
